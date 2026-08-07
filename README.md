@@ -1,8 +1,10 @@
-You need menagerie files in workflow directory.
+You need **menagerie** files in workflow directory.
 
 How to install
 
+```bash
 git clone https://github.com/google-deepmind/mujoco_menagerie.git
+````
 
 Other packages:
 ```bash
