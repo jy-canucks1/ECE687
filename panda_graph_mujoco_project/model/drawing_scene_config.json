@@ -1,0 +1,14 @@
+{
+  "paper_center_x_m": 0.5,
+  "paper_center_y_m": 0.0,
+  "paper_width_m": 0.32,
+  "paper_height_m": 0.2,
+  "table_top_z_m": 0.2,
+  "paper_thickness_m": 0.004,
+  "paper_surface_z_m": 0.20400000000000001,
+  "pen_tip_radius_m": 0.001,
+  "pen_tip_offset_from_hand_m": 0.18,
+  "draw_target_tip_center_z_m": 0.2048,
+  "contact_indentation_m": 0.0002,
+  "recommended_lift_height_m": 0.035
+}

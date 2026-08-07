@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="Panda graph drawing">
+  <include file="panda_drawing.xml"/>
+
+  <statistic center="0.42 0 0.38" extent="1.05"/>
+
+  <visual>
+    <headlight diffuse="0.65 0.65 0.65" ambient="0.3 0.3 0.3" specular="0 0 0"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <global azimuth="135" elevation="-24"/>
+  </visual>
+
+  <worldbody>
+    <light pos="0.5 0 1.5" dir="0 0 -1" directional="true"/>
+    <geom name="floor" type="plane" size="2 2 0.1" rgba="0.32 0.35 0.38 1"/>
+
+    <geom name="drawing_table" type="box"
+          pos="0.5 0 0.1"
+          size="0.46 0.36 0.1"
+          rgba="0.55 0.44 0.34 1" friction="0.8 0.01 0.001"/>
+
+    <body name="paper" pos="0.5 0 0.202">
+      <geom name="paper_geom" type="box"
+            size="0.16 0.1 0.002"
+            rgba="0.97 0.97 0.94 1"
+            friction="0.55 0.01 0.001"
+            solref="0.01 1" solimp="0.95 0.99 0.001"/>
+    </body>
+
+    <camera name="paper_camera" pos="0.5 0 0.95"
+            quat="1 0 0 0" fovy="28"/>
+  </worldbody>
+</mujoco>
