@@ -29,7 +29,7 @@ Switch --no-viewer- to --viewer in the command line if you want to see the whole
 
 
 Console window should be like this:
-
+```
 [black_pixels_to_vertical_graph]
 [vertical_graph_to_paths]
 [mujoco_spring_pen_simulation]
@@ -57,3 +57,4 @@ Drawing [##################] 16874/16874 100.0% elapsed 47:48 | complete
 Simulation outputs written: simulated_drawing.png, simulated_trajectory.png, simulation_summary.json; contact_ink_ok=True; notices=7524
 Motion diagnostics: /home/jy23choi/Desktop/panda_graph_mujoco_project/workflow/output/lm_vertical_track_recovery_simple/skipped_strokes_record.json
 Manifest: /home/jy23choi/Desktop/panda_graph_mujoco_project/workflow/output/lm_vertical_track_recovery_simple/workflow_manifest.json
+```
