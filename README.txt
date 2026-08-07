@@ -6,24 +6,24 @@ How to install
 git clone https://github.com/google-deepmind/mujoco_menagerie.git
 
 Other packages:
-```
-python3 -m pip install numpy pandas opencv-python mujoco glfw scikit-image Pillow torch torchvision
+```bash
+python -m pip install numpy pandas opencv-python mujoco glfw scikit-image Pillow torch torchvision
 ```
 
 
 Command line example:
 
 Image processing
-```
+```bash
 python photo_to_bw_human_cartoon_fixed_v5.py LM.png     -o LM_bw_cartoon_fixed.png     --render-mode portrait     --portrait-style ink     --detail medium     --line-width 2     --minimum-component 18     --save-debug
 ```
 or
-```
+```bash
 python photo_to_bw_human_cartoon_fixed_v5.py LM.png     -o LM_bw_cartoon_simple.png     --render-mode portrait     --portrait-style ink     --detail medium     --line-width 1     --minimum-component 18     --save-debug
 ```
 
 Robot simulation
-```
+```bash
 (rcontrol) jy23choi@Solids63:~/Desktop/panda_graph_mujoco_project/workflow$ python3 run_vertical_pen_track_recovery_20260806.py LM_bw_cartoon_simple.png --project-root /home/jy23choi/Desktop/panda_graph_mujoco_project/workflow --output-dir output/lm_vertical_track_recovery_simple --model model/drawing_scene.xml --scene-config model/drawing_scene_config.json --black-threshold 160 --minimum-component-size 1 --black-mask-close-iterations 0 --line-overlap 0.50 --global-grid-phase 0.50 --coverage-repair-iterations 12 --minimum-centerline-length 0.00005 --paper-center-x 0.50 --paper-center-y 0.00 --paper-width 0.32 --paper-height 0.20 --paper-margin 0.01 --spacing 0.001 --pen-spring-stiffness 70 --pen-spring-damping 1.0 --pen-spring-travel 0.015 --pen-body-radius 0.0025 --pen-tip-radius 0.0003 --pen-paper-penetration 0.00020 --guide-press-depth 0.0020 --lower-contact-gap-tolerance 0.0005 --contact-settle-time 0.30 --target-contact-force 0.05 --overforce-limit 7.0 --pose-completion-tolerance 0.001 --hard-pose-failure-tolerance 0.006 --pose-retries 3 --entry-xy-tolerance 0.00001 --entry-along-track-tolerance 0.00010 --endpoint-xy-tolerance 0.00001 --endpoint-along-track-tolerance 0.00010 --cross-track-slowdown-error 0.00018 --cross-track-stop-error 0.00055 --tracking-slowdown-error 0.0010 --tracking-stop-error 0.0040 --tracking-stall-timeout 8.0 --continuous-stroke-timeout-factor 4.0 --cross-track-position-gain 24 --along-track-position-gain 12 --normal-position-gain 10 --cartesian-damping 0.015 --seat-correction-attempts 4 --maximum-seat-correction-depth 0.0025 --seat-correction-margin 0.00010 --draw-start-settle-time 0.30 --draw-end-settle-time 0.20 --xy-stable-time 0.03 --draw-speed 0.0005 --transfer-speed 0.003 --vertical-speed 0.01 --log-stride 10 --progress-width 18 --no-viewer --rebuild-spring-model
 ```
 Switch --no-viewer- to --viewer in the command line if you want to see the whole MuJoCo 3D robot simulation
